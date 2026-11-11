@@ -1,0 +1,31 @@
+:root {
+  /* Màu theo logo: đỏ - cam - xanh navy */
+  --brand: #b8362f;
+  --brand-dark: #9b3433;
+  --brand-soft: #fdece6;
+  --accent: #de8340;
+  --navy: #26437f;
+  --ink: #1b2a4a;
+  --muted: #5f6b84;
+  --line: #ece5e1;
+  --bg: #fffaf7;
+  --card: #ffffff;
+  --radius: 20px;
+  --shadow: 0 10px 30px rgba(38, 67, 127, 0.1);
+  /* Đổi font tại đây (nhớ đổi cả link Google Fonts trong index.html) */
+  --font: 'Google Sans Flex', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
