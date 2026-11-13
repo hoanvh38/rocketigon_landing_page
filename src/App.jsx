@@ -74,10 +74,17 @@ const FAQ = [
   ['Làm sao để đăng ký bán hàng cùng Rocketigo?', 'Chỉ cần điền biểu mẫu ở phần "Trở thành đối tác", đội ngũ sẽ liên hệ trong vòng 24 giờ.'],
 ]
 
-function Logo() {
+function Logo({ full = false }) {
+  if (full) {
+    return (
+      <a href="#top" className="logo" aria-label="Rocketigo">
+        <img src="/logo-full.png" alt="Rocketigo" className="logo-full" />
+      </a>
+    )
+  }
   return (
     <a href="#top" className="logo" aria-label="Rocketigo">
-      <img src="/logo.png" alt="" className="logo-img" />
+      <img src="/logo-footer.png" alt="" className="logo-img" />
       <span>Rocketigo</span>
     </a>
   )
@@ -88,7 +95,7 @@ function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <Logo />
+        <Logo full />
         <nav className={`nav ${open ? 'open' : ''}`}>
           {NAV.map(([label, href]) => (
             <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
@@ -471,8 +478,8 @@ function Footer() {
         </div>
         <div>
           <strong>Liên hệ</strong>
-          <a href="mailto:hello@rocketigo.vn">hello@rocketigo.vn</a>
-          <a href="tel:19001234">Hotline: 1900 1234</a>
+          <a href="mailto:rocketigo.38@gmail.com">rocketigo.38@gmail.com</a>
+          <a href="tel:0378425435">Hotline: 037 8425435</a>
         </div>
       </div>
       <div className="container copy">© {new Date().getFullYear()} Rocketigo. Bảo lưu mọi quyền.</div>
